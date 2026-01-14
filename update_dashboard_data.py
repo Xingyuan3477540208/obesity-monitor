@@ -1,155 +1,66 @@
 """
-Obesity Drug Dashboard - Data Update Script for GitHub Actions
-============================================================
+Obesity Drug Dashboard - Automated Daily Update System
+=====================================================
 
-This script runs in GitHub Actions daily to update market data and news.
-Output is saved to public/dashboard_data.json for Vercel to serve.
+This script fetches latest market data and news to keep the dashboard current.
+Schedule with cron (Linux/Mac) or Task Scheduler (Windows) to run daily.
 
-Author: Auto-generated
-Last Modified: 2026-01-12
+Requirements:
+    pip install requests pandas yfinance beautifulsoup4 feedparser --break-system-packages
+
+Usage:
+    python update_dashboard_data.py
 """
 
 import json
-import os
-import sys
-from datetime import datetime, timedelta
-from pathlib import Path
 import requests
-from typing import Dict, List, Optional
-
-# Try to import optional dependencies
-try:
-    import yfinance as yf
-    YFINANCE_AVAILABLE = True
-except ImportError:
-    YFINANCE_AVAILABLE = False
-    print("⚠️ yfinance not available, will use fallback data")
-
-try:
-    import feedparser
-    FEEDPARSER_AVAILABLE = True
-except ImportError:
-    FEEDPARSER_AVAILABLE = False
-    print("⚠️ feedparser not available, will use fallback news")
-
-try:
-    import pandas as pd
-    PANDAS_AVAILABLE = True
-except ImportError:
-    PANDAS_AVAILABLE = False
+from datetime import datetime, timedelta
+import yfinance as yf
+import feedparser
+from pathlib import Path
 
 # Configuration
-TICKERS = {
-    'LLY': 'Eli Lilly',
-    'NVO': 'Novo Nordisk',
-    'VKTX': 'Viking Therapeutics',
-    'AMGN': 'Amgen',
-    'RHHBY': 'Roche',
-    'PFE': 'Pfizer'
-}
-
-NEWS_FEEDS = [
+TICKERS = ['LLY', 'NVO', 'VKTX', 'AMGN', 'RHHBY', 'PFE']
+OUTPUT_FILE = 'dashboard_data.json'
+NEWS_SOURCES = [
     'https://www.fiercebiotech.com/rss/xml',
     'https://www.biopharmadive.com/feeds/news/',
 ]
 
-OUTPUT_DIR = Path(__file__).parent.parent / 'public'
-OUTPUT_FILE = OUTPUT_DIR / 'dashboard_data.json'
-
-def ensure_output_dir():
-    """Create output directory if it doesn't exist"""
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    print(f"✓ Output directory: {OUTPUT_DIR}")
-
-def fetch_market_data() -> List[Dict]:
+def fetch_market_data():
     """Fetch real-time stock data using yfinance"""
-    print("\n📊 Fetching market data...")
+    print("📊 Fetching market data...")
     market_data = []
     
-    if not YFINANCE_AVAILABLE:
-        print("⚠️ Using fallback market data")
-        return get_fallback_market_data()
-    
-    for ticker, company in TICKERS.items():
+    for ticker in TICKERS:
         try:
-            print(f"  Fetching {ticker}...", end=' ')
             stock = yf.Ticker(ticker)
+            info = stock.info
+            hist = stock.history(period='1d')
             
-            # Get current data
-            hist = stock.history(period='5d')
-            if hist.empty:
-                print("❌ No data")
-                continue
-            
-            current_price = hist['Close'].iloc[-1]
-            
-            # Get previous close from info or calculate from history
-            try:
-                info = stock.info
-                previous_close = info.get('previousClose', hist['Close'].iloc[-2] if len(hist) > 1 else current_price)
-                market_cap = info.get('marketCap', 0)
-            except:
-                previous_close = hist['Close'].iloc[-2] if len(hist) > 1 else current_price
-                market_cap = 0
-            
-            change = current_price - previous_close
-            change_percent = (change / previous_close) * 100 if previous_close else 0
-            
-            market_data.append({
-                'ticker': ticker,
-                'company': company,
-                'price': round(float(current_price), 2),
-                'change': round(float(change), 2),
-                'changePercent': round(float(change_percent), 2),
-                'marketCap': format_market_cap(market_cap),
-                'sentiment': calculate_sentiment(ticker, change_percent),
-                'lastUpdate': datetime.now().isoformat()
-            })
-            print(f"✓ ${current_price:.2f}")
-            
+            if not hist.empty:
+                current_price = hist['Close'].iloc[-1]
+                previous_close = info.get('previousClose', current_price)
+                change = current_price - previous_close
+                change_percent = (change / previous_close) * 100
+                
+                market_data.append({
+                    'ticker': ticker,
+                    'company': info.get('longName', ticker),
+                    'price': round(current_price, 2),
+                    'change': round(change, 2),
+                    'changePercent': round(change_percent, 2),
+                    'marketCap': format_market_cap(info.get('marketCap', 0)),
+                    'sentiment': calculate_sentiment(ticker, change_percent),
+                    'lastUpdate': datetime.now().isoformat()
+                })
+                print(f"  ✓ {ticker}: ${current_price:.2f}")
         except Exception as e:
-            print(f"❌ Error: {str(e)[:50]}")
-            # Add placeholder data
-            market_data.append(get_fallback_stock_data(ticker, company))
+            print(f"  ✗ Error fetching {ticker}: {e}")
     
-    return market_data if market_data else get_fallback_market_data()
+    return market_data
 
-def get_fallback_market_data() -> List[Dict]:
-    """Fallback market data when API fails"""
-    return [
-        {'ticker': 'LLY', 'company': 'Eli Lilly', 'price': 1063.91, 'change': 22.53, 'changePercent': 2.16, 'marketCap': '959.5B', 'sentiment': 0.85, 'lastUpdate': datetime.now().isoformat()},
-        {'ticker': 'NVO', 'company': 'Novo Nordisk', 'price': 59.45, 'change': 0.64, 'changePercent': 1.09, 'marketCap': '261.3B', 'sentiment': 0.68, 'lastUpdate': datetime.now().isoformat()},
-        {'ticker': 'VKTX', 'company': 'Viking Therapeutics', 'price': 32.03, 'change': 0.38, 'changePercent': 1.20, 'marketCap': '3.61B', 'sentiment': 0.72, 'lastUpdate': datetime.now().isoformat()},
-        {'ticker': 'AMGN', 'company': 'Amgen', 'price': 289.45, 'change': -2.10, 'changePercent': -0.72, 'marketCap': '154.8B', 'sentiment': 0.75, 'lastUpdate': datetime.now().isoformat()},
-        {'ticker': 'RHHBY', 'company': 'Roche', 'price': 38.20, 'change': 0.55, 'changePercent': 1.46, 'marketCap': '240.5B', 'sentiment': 0.70, 'lastUpdate': datetime.now().isoformat()},
-        {'ticker': 'PFE', 'company': 'Pfizer', 'price': 25.80, 'change': -0.15, 'changePercent': -0.58, 'marketCap': '145.2B', 'sentiment': 0.65, 'lastUpdate': datetime.now().isoformat()}
-    ]
-
-def get_fallback_stock_data(ticker: str, company: str) -> Dict:
-    """Get fallback data for a single stock"""
-    fallback = {
-        'LLY': (1063.91, 22.53, 2.16, '959.5B', 0.85),
-        'NVO': (59.45, 0.64, 1.09, '261.3B', 0.68),
-        'VKTX': (32.03, 0.38, 1.20, '3.61B', 0.72),
-        'AMGN': (289.45, -2.10, -0.72, '154.8B', 0.75),
-        'RHHBY': (38.20, 0.55, 1.46, '240.5B', 0.70),
-        'PFE': (25.80, -0.15, -0.58, '145.2B', 0.65)
-    }
-    
-    price, change, change_pct, cap, sentiment = fallback.get(ticker, (100.0, 0.0, 0.0, '0B', 0.5))
-    
-    return {
-        'ticker': ticker,
-        'company': company,
-        'price': price,
-        'change': change,
-        'changePercent': change_pct,
-        'marketCap': cap,
-        'sentiment': sentiment,
-        'lastUpdate': datetime.now().isoformat()
-    }
-
-def format_market_cap(market_cap: float) -> str:
+def format_market_cap(market_cap):
     """Format market cap to B/T notation"""
     if market_cap >= 1e12:
         return f"{market_cap / 1e12:.1f}T"
@@ -160,8 +71,8 @@ def format_market_cap(market_cap: float) -> str:
     else:
         return f"{market_cap:.0f}"
 
-def calculate_sentiment(ticker: str, change_percent: float) -> float:
-    """Calculate AI sentiment score based on price momentum and pipeline strength"""
+def calculate_sentiment(ticker, change_percent):
+    """Calculate AI sentiment score based on price momentum and company"""
     # Base sentiment on recent performance
     if change_percent > 5:
         base = 0.85
@@ -172,218 +83,152 @@ def calculate_sentiment(ticker: str, change_percent: float) -> float:
     else:
         base = 0.55
     
-    # Adjust by company pipeline strength
-    pipeline_strength = {
-        'LLY': 0.10,   # Orforglipron + Retatrutide
-        'AMGN': 0.08,  # MariTide Phase 2 strong
-        'VKTX': 0.05,  # Phase 3 ongoing
-        'NVO': 0.03,   # Market leader, but competition
-        'RHHBY': 0.05, # Ambitious top 3 strategy
+    # Adjust by company pipeline strength (based on our analysis)
+    adjustments = {
+        'LLY': 0.10,   # Strong pipeline (Orforglipron, Retatrutide)
+        'AMGN': 0.08,  # MariTide strong Phase 2
+        'VKTX': 0.05,  # Viking Phase 3 ongoing
+        'NVO': 0.03,   # Market leader but competition increasing
+        'RHHBY': 0.05, # Ambitious strategy
         'PFE': 0.00,   # Just acquired Metsera
     }
     
-    return min(0.95, base + pipeline_strength.get(ticker, 0))
+    return min(0.95, base + adjustments.get(ticker, 0))
 
-def fetch_news() -> List[Dict]:
+def fetch_news():
     """Fetch latest obesity drug news from RSS feeds"""
-    print("\n📰 Fetching news...")
-    
-    if not FEEDPARSER_AVAILABLE:
-        print("⚠️ Using fallback news data")
-        return get_fallback_news()
-    
+    print("\n📰 Fetching intelligence feed...")
     news_items = []
-    keywords = ['obesity', 'GLP-1', 'GLP1', 'weight loss', 'semaglutide', 'tirzepatide', 
-                'Wegovy', 'Zepbound', 'orforglipron', 'retatrutide', 'MariTide',
-                'Ozempic', 'Mounjaro', 'Viking', 'Eli Lilly', 'Novo Nordisk',
-                'Amgen', 'Pfizer', 'Roche', 'Metsera']
     
-    for feed_url in NEWS_FEEDS:
+    keywords = ['obesity', 'GLP-1', 'weight loss', 'semaglutide', 'tirzepatide', 
+                'Wegovy', 'Zepbound', 'orforglipron', 'retatrutide', 'MariTide']
+    
+    for feed_url in NEWS_SOURCES:
         try:
-            print(f"  Fetching {feed_url}...", end=' ')
             feed = feedparser.parse(feed_url)
-            
-            for entry in feed.entries[:20]:  # Get top 20 articles
+            for entry in feed.entries[:10]:  # Get recent 10 articles
                 title = entry.get('title', '')
                 summary = entry.get('summary', entry.get('description', ''))
-                combined = (title + ' ' + summary).lower()
                 
-                # Check relevance
-                if any(kw.lower() in combined for kw in keywords):
-                    published = entry.get('published', entry.get('updated', ''))
-                    
+                # Check if article is relevant
+                if any(keyword.lower() in (title + summary).lower() for keyword in keywords):
                     news_items.append({
-                        'date': parse_date(published),
-                        'headline': title[:150],  # Limit length
-                        'summary': clean_html(summary[:300]),
+                        'date': entry.get('published', datetime.now().strftime('%Y-%m-%d')),
+                        'headline': title,
+                        'summary': summary[:200] + '...' if len(summary) > 200 else summary,
                         'source': feed.feed.get('title', 'News'),
                         'link': entry.get('link', ''),
-                        'priority': determine_priority(title + summary),
-                        'company': extract_company(title + summary)
+                        'priority': determine_priority(title + summary)
                     })
-            
-            print(f"✓ {len([n for n in news_items if n['source'] == feed.feed.get('title', 'News')])} relevant")
-            
+            print(f"  ✓ Fetched from {feed.feed.get('title', feed_url)}")
         except Exception as e:
-            print(f"❌ {str(e)[:50]}")
+            print(f"  ✗ Error fetching feed {feed_url}: {e}")
     
     # Sort by date and return top 10
     news_items.sort(key=lambda x: x['date'], reverse=True)
-    return news_items[:10] if news_items else get_fallback_news()
+    return news_items[:10]
 
-def get_fallback_news() -> List[Dict]:
-    """Fallback news when RSS fails"""
-    return [
-        {
-            'date': '2026-01-12',
-            'source': 'Obesity Journal',
-            'priority': 'high',
-            'headline': 'Viking VENTURE Phase 2 Published',
-            'summary': 'VK2735 SC: 14.7% weight loss, no plateau observed',
-            'company': 'VKTX',
-            'impact': 'Peer-reviewed validation',
-            'link': 'https://example.com'
-        },
-        {
-            'date': '2026-01-10',
-            'source': 'CNBC',
-            'priority': 'high',
-            'headline': '2026: Year of Obesity Pills',
-            'summary': 'Oral formulations expanding addressable market',
-            'company': 'Multiple',
-            'impact': 'Market expansion',
-            'link': 'https://example.com'
-        }
-    ]
-
-def parse_date(date_str: str) -> str:
-    """Parse various date formats to YYYY-MM-DD"""
-    try:
-        from email.utils import parsedate_to_datetime
-        dt = parsedate_to_datetime(date_str)
-        return dt.strftime('%Y-%m-%d')
-    except:
-        return datetime.now().strftime('%Y-%m-%d')
-
-def clean_html(text: str) -> str:
-    """Remove HTML tags from text"""
-    import re
-    clean = re.compile('<.*?>')
-    return re.sub(clean, '', text).strip()
-
-def determine_priority(text: str) -> str:
+def determine_priority(text):
     """Determine news priority based on keywords"""
-    critical = ['FDA approval', 'Phase 3 results', 'acquisition', 'breakthrough']
-    high = ['Phase 2', 'clinical trial', 'partnership', 'data readout']
+    critical_keywords = ['FDA approval', 'Phase 3 results', 'acquisition', 'breakthrough']
+    high_keywords = ['Phase 2', 'clinical trial', 'partnership', 'data']
     
     text_lower = text.lower()
     
-    if any(kw.lower() in text_lower for kw in critical):
+    if any(kw.lower() in text_lower for kw in critical_keywords):
         return 'critical'
-    elif any(kw.lower() in text_lower for kw in high):
+    elif any(kw.lower() in text_lower for kw in high_keywords):
         return 'high'
     else:
         return 'medium'
 
-def extract_company(text: str) -> str:
-    """Extract company ticker from text"""
-    companies = {
-        'lilly': 'LLY',
-        'eli lilly': 'LLY',
-        'novo': 'NVO',
-        'novo nordisk': 'NVO',
-        'viking': 'VKTX',
-        'amgen': 'AMGN',
-        'roche': 'RHHBY',
-        'pfizer': 'PFE',
-        'metsera': 'PFE'
-    }
+def fetch_fda_calendar():
+    """Check FDA calendar for upcoming obesity drug decisions"""
+    print("\n📅 Checking FDA calendar...")
     
-    text_lower = text.lower()
-    for name, ticker in companies.items():
-        if name in text_lower:
-            return ticker
+    # This would ideally scrape FDA.gov or use an API
+    # For now, we'll return our known catalysts
+    known_catalysts = [
+        {
+            'date': '2026-03-31',
+            'event': 'Orforglipron FDA Decision',
+            'company': 'LLY',
+            'description': 'Priority review for oral GLP-1',
+            'type': 'regulatory'
+        },
+        {
+            'date': '2026-06-30',
+            'event': 'CT-388 Phase 3 Initiation',
+            'company': 'RHHBY',
+            'description': 'Roche dual GLP-1/GIP',
+            'type': 'clinical'
+        }
+    ]
     
-    return 'Multiple'
+    return known_catalysts
 
-def calculate_statistics(market_data: List[Dict]) -> Dict:
-    """Calculate market statistics"""
-    if not market_data:
-        return {}
-    
-    total_change = sum(s['changePercent'] for s in market_data)
-    avg_change = total_change / len(market_data)
-    
-    gainers = [s for s in market_data if s['changePercent'] > 0]
-    losers = [s for s in market_data if s['changePercent'] < 0]
-    
-    return {
-        'totalStocks': len(market_data),
-        'avgChange': round(avg_change, 2),
-        'gainers': len(gainers),
-        'losers': len(losers),
-        'unchanged': len(market_data) - len(gainers) - len(losers)
-    }
-
-def main():
-    """Main update function"""
-    print("=" * 60)
-    print("🚀 Obesity Drug Dashboard - Data Update")
-    print("=" * 60)
-    print(f"Timestamp: {datetime.now().isoformat()}")
-    print(f"Python: {sys.version}")
-    print()
-    
-    # Ensure output directory exists
-    ensure_output_dir()
+def update_dashboard_json():
+    """Main function to update all dashboard data"""
+    print("🚀 Starting dashboard data update...\n")
     
     # Fetch all data
     market_data = fetch_market_data()
     news = fetch_news()
+    catalysts = fetch_fda_calendar()
     
-    # Calculate statistics
-    stats = calculate_statistics(market_data)
-    
-    # Compile dashboard data
+    # Compile complete data structure
     dashboard_data = {
         'lastUpdate': datetime.now().isoformat(),
         'marketData': market_data,
         'intelligenceFeed': news,
-        'statistics': stats,
+        'upcomingCatalysts': catalysts,
         'metadata': {
-            'version': '2.0',
-            'source': 'GitHub Actions',
+            'version': '1.0',
             'dataQuality': {
                 'marketData': len(market_data) == len(TICKERS),
                 'newsItems': len(news) > 0,
-                'usingFallback': not YFINANCE_AVAILABLE or not FEEDPARSER_AVAILABLE
+                'catalysts': len(catalysts) > 0
             }
         }
     }
     
-    # Save to JSON
-    with open(OUTPUT_FILE, 'w') as f:
+    # Save to JSON file
+    output_path = Path(__file__).parent / OUTPUT_FILE
+    with open(output_path, 'w') as f:
         json.dump(dashboard_data, f, indent=2)
     
-    # Print summary
-    print("\n" + "=" * 60)
-    print("✅ UPDATE COMPLETE")
-    print("=" * 60)
-    print(f"📊 Market Data: {len(market_data)} stocks")
-    print(f"📰 News Items: {len(news)} articles")
-    print(f"📁 Output: {OUTPUT_FILE}")
-    print(f"📏 File Size: {OUTPUT_FILE.stat().st_size} bytes")
-    print(f"📈 Statistics: {stats}")
-    print("=" * 60)
+    print(f"\n✅ Dashboard data updated successfully!")
+    print(f"📁 Saved to: {output_path}")
+    print(f"📊 Market data: {len(market_data)} tickers")
+    print(f"📰 News items: {len(news)} articles")
+    print(f"📅 Catalysts: {len(catalysts)} events")
     
     return dashboard_data
 
+def generate_update_report():
+    """Generate a summary report of updates"""
+    data = json.load(open(OUTPUT_FILE))
+    
+    print("\n" + "="*60)
+    print("DAILY UPDATE REPORT")
+    print("="*60)
+    print(f"Update Time: {data['lastUpdate']}")
+    print("\nMarket Summary:")
+    
+    for stock in data['marketData']:
+        emoji = "📈" if stock['change'] > 0 else "📉"
+        print(f"  {emoji} {stock['ticker']}: ${stock['price']} ({stock['changePercent']:+.2f}%)")
+    
+    print(f"\nTop News ({len(data['intelligenceFeed'])} items):")
+    for news in data['intelligenceFeed'][:3]:
+        print(f"  • {news['headline'][:60]}...")
+    
+    print("="*60)
+
 if __name__ == "__main__":
     try:
-        main()
-        sys.exit(0)
+        update_dashboard_json()
+        generate_update_report()
     except Exception as e:
-        print(f"\n❌ ERROR: {e}", file=sys.stderr)
-        import traceback
-        traceback.print_exc()
-        sys.exit(1)
+        print(f"❌ Error during update: {e}")
+        raise
