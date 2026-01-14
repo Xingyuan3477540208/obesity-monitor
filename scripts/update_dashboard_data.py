@@ -212,7 +212,7 @@ def update_dashboard_json():
 def generate_update_report():
     """Generate a summary report of updates"""
     report_path = Path(__file__).parent / ".." / "public" / OUTPUT_FILE
-    data = json.load(open(report_path)))
+    data = json.load(open(report_path))
     
     print("\n" + "="*60)
     print("DAILY UPDATE REPORT")
