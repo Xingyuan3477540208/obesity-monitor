@@ -193,7 +193,11 @@ def update_dashboard_json():
     }
     
     # Save to JSON file
-    output_path = Path(__file__).parent / OUTPUT_FILE
+    output_path = Path(__file__).parent / ".." / "public" / OUTPUT_FILE
+    
+    # 自动创建 public 文件夹（如果它不存在的话）
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    
     with open(output_path, 'w') as f:
         json.dump(dashboard_data, f, indent=2)
     
