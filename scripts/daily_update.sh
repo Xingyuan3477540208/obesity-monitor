@@ -13,11 +13,14 @@
 
 set -e  # 遇到错误立即退出
 
-# 配置
+# 修改后的配置区
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LOG_FILE="$SCRIPT_DIR/update.log"
-DATA_FILE="$SCRIPT_DIR/dashboard_data.json"
-BACKUP_DIR="$SCRIPT_DIR/backups"
+# 关键：指向根目录下的 public 文件夹
+DATA_FILE="$SCRIPT_DIR/../public/dashboard_data.json"
+BACKUP_DIR="$SCRIPT_DIR/../backups"
+# 关键：报告放在根目录
+REPORT_FILE="$SCRIPT_DIR/../latest_update_report.txt"
 
 # 颜色输出
 RED='\033[0;31m'
@@ -122,7 +125,7 @@ fi
 # 5. 可选：提交到Git
 if [ -d ".git" ]; then
     log "📝 Committing changes to Git..."
-    git add dashboard_data.json
+    git add "$DATA_FILE" "$REPORT_FILE"
     
     if git diff --staged --quiet; then
         log "ℹ️  No changes to commit"
@@ -138,7 +141,7 @@ if [ -d ".git" ]; then
 fi
 
 # 6. 生成更新报告
-REPORT_FILE="$SCRIPT_DIR/latest_update_report.txt"
+REPORT_FILE="$SCRIPT_DIR/../latest_update_report.txt"
 cat > "$REPORT_FILE" << EOF
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   Obesity Drug Dashboard - Update Report
