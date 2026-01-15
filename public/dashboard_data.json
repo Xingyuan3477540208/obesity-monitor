@@ -1,0 +1,115 @@
+{
+  "lastUpdate": "2026-01-14T22:05:51.526635",
+  "marketData": [
+    {
+      "ticker": "LLY",
+      "company": "Eli Lilly and Company",
+      "price": 1073.29,
+      "change": -3.9,
+      "changePercent": -0.36,
+      "marketCap": "962.2B",
+      "sentiment": 0.75,
+      "lastUpdate": "2026-01-14T22:05:49.787369"
+    },
+    {
+      "ticker": "NVO",
+      "company": "Novo Nordisk A/S",
+      "price": 58.91,
+      "change": -0.73,
+      "changePercent": -1.22,
+      "marketCap": "261.8B",
+      "sentiment": 0.68,
+      "lastUpdate": "2026-01-14T22:05:50.116918"
+    },
+    {
+      "ticker": "VKTX",
+      "company": "Viking Therapeutics, Inc.",
+      "price": 34.34,
+      "change": 3.65,
+      "changePercent": 11.89,
+      "marketCap": "3.9B",
+      "sentiment": 0.9,
+      "lastUpdate": "2026-01-14T22:05:50.344001"
+    },
+    {
+      "ticker": "AMGN",
+      "company": "Amgen Inc.",
+      "price": 328.97,
+      "change": 4.67,
+      "changePercent": 1.44,
+      "marketCap": "177.1B",
+      "sentiment": 0.73,
+      "lastUpdate": "2026-01-14T22:05:50.639098"
+    },
+    {
+      "ticker": "RHHBY",
+      "company": "Roche Holding AG",
+      "price": 53.96,
+      "change": 0.74,
+      "changePercent": 1.39,
+      "marketCap": "344.0B",
+      "sentiment": 0.7000000000000001,
+      "lastUpdate": "2026-01-14T22:05:50.937626"
+    },
+    {
+      "ticker": "PFE",
+      "company": "Pfizer Inc.",
+      "price": 25.58,
+      "change": 0.43,
+      "changePercent": 1.71,
+      "marketCap": "145.4B",
+      "sentiment": 0.65,
+      "lastUpdate": "2026-01-14T22:05:51.259235"
+    }
+  ],
+  "intelligenceFeed": [
+    {
+      "date": "Wed, 14 Jan 2026 14:59:25 -0500",
+      "headline": "JPM26: Paying cash for obesity drugs, renewed IPO optimism and pharma\u2019s cell therapy view",
+      "summary": "<p>Drugmaker CEOs see sales online channels as a budding opportunity, while some biotech investors told BioPharma Dive to expect a rebound in new stock offerings.&nbsp;</p>",
+      "source": "BioPharma Dive - Latest News",
+      "link": "https://www.biopharmadive.com/news/jpm26-biotech-ipos-novo-wegovy-gsk-cell-therapy/809600/",
+      "priority": "medium"
+    },
+    {
+      "date": "Wed, 14 Jan 2026 11:51:00 -0500",
+      "headline": "Lilly, chasing Novo, expects second-quarter FDA decision on obesity pill",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/sK36taOntL0sw2_zWz8nSJ3873bo7plwtI6utL4RRlQ/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjQ1MzYyOTkyXzEuanBn...",
+      "source": "BioPharma Dive - Latest News",
+      "link": "https://www.biopharmadive.com/news/lilly-obesity-pill-orforglipron-fda-decision-dtc-sales/809598/",
+      "priority": "medium"
+    },
+    {
+      "date": "Mon, 12 Jan 2026 17:18:00 -0500",
+      "headline": "JPM26: US biotech\u2019s \u2018Sputnik moment,\u2019 Pfizer\u2019s obesity ambitions and Bristol Myers\u2019 big year",
+      "summary": "<p>Four recent deals fueled more angst about China&rsquo;s biotech progress, while Pfizer, Bristol Myers and Sarepta all worked to appease jittery investors.&nbsp;</p>",
+      "source": "BioPharma Dive - Latest News",
+      "link": "https://www.biopharmadive.com/news/jpm26-china-biotech-pfizer-obesity-bristol-sarepta-elevidys-sales/809320/",
+      "priority": "medium"
+    }
+  ],
+  "upcomingCatalysts": [
+    {
+      "date": "2026-03-31",
+      "event": "Orforglipron FDA Decision",
+      "company": "LLY",
+      "description": "Priority review for oral GLP-1",
+      "type": "regulatory"
+    },
+    {
+      "date": "2026-06-30",
+      "event": "CT-388 Phase 3 Initiation",
+      "company": "RHHBY",
+      "description": "Roche dual GLP-1/GIP",
+      "type": "clinical"
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "dataQuality": {
+      "marketData": true,
+      "newsItems": true,
+      "catalysts": true
+    }
+  }
+}
