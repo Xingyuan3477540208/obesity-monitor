@@ -1,15 +1,13 @@
 {
-  "lastUpdate": "2026-01-15T20:47:55.973322",
-  "marketData": [
+  "lastUpdated": "2026-01-16T02:17:25.642632Z",
+  "stocks": [
     {
       "ticker": "LLY",
       "company": "Eli Lilly and Company",
       "price": 1032.97,
       "change": -40.32,
       "changePercent": -3.76,
-      "marketCap": "926.0B",
-      "sentiment": 0.65,
-      "lastUpdate": "2026-01-15T20:47:54.158022"
+      "marketCap": "926.0B"
     },
     {
       "ticker": "NVO",
@@ -17,9 +15,7 @@
       "price": 57.12,
       "change": -1.79,
       "changePercent": -3.04,
-      "marketCap": "253.8B",
-      "sentiment": 0.5800000000000001,
-      "lastUpdate": "2026-01-15T20:47:54.474930"
+      "marketCap": "253.8B"
     },
     {
       "ticker": "VKTX",
@@ -27,9 +23,7 @@
       "price": 31.88,
       "change": -2.46,
       "changePercent": -7.16,
-      "marketCap": "3.6B",
-      "sentiment": 0.6000000000000001,
-      "lastUpdate": "2026-01-15T20:47:54.693463"
+      "marketCap": "3.6B"
     },
     {
       "ticker": "AMGN",
@@ -37,19 +31,15 @@
       "price": 330.03,
       "change": 1.06,
       "changePercent": 0.32,
-      "marketCap": "177.7B",
-      "sentiment": 0.73,
-      "lastUpdate": "2026-01-15T20:47:54.936257"
+      "marketCap": "177.7B"
     },
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
       "price": 53.9,
-      "change": -0.1,
-      "changePercent": -0.19,
-      "marketCap": "343.4B",
-      "sentiment": 0.7000000000000001,
-      "lastUpdate": "2026-01-15T20:47:55.238971"
+      "change": -0.06,
+      "changePercent": -0.11,
+      "marketCap": "343.4B"
     },
     {
       "ticker": "PFE",
@@ -57,51 +47,7 @@
       "price": 25.89,
       "change": 0.31,
       "changePercent": 1.21,
-      "marketCap": "147.2B",
-      "sentiment": 0.65,
-      "lastUpdate": "2026-01-15T20:47:55.614757"
+      "marketCap": "147.2B"
     }
-  ],
-  "intelligenceFeed": [
-    {
-      "date": "Wed, 14 Jan 2026 14:59:25 -0500",
-      "headline": "JPM26: Paying cash for obesity drugs, renewed IPO optimism and pharma\u2019s cell therapy view",
-      "summary": "<p>Drugmaker CEOs see sales online channels as a budding opportunity, while some biotech investors told BioPharma Dive to expect a rebound in new stock offerings.&nbsp;</p>",
-      "source": "BioPharma Dive - Latest News",
-      "link": "https://www.biopharmadive.com/news/jpm26-biotech-ipos-novo-wegovy-gsk-cell-therapy/809600/",
-      "priority": "medium"
-    },
-    {
-      "date": "Wed, 14 Jan 2026 11:51:00 -0500",
-      "headline": "Lilly, chasing Novo, expects second-quarter FDA decision on obesity pill",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/sK36taOntL0sw2_zWz8nSJ3873bo7plwtI6utL4RRlQ/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjQ1MzYyOTkyXzEuanBn...",
-      "source": "BioPharma Dive - Latest News",
-      "link": "https://www.biopharmadive.com/news/lilly-obesity-pill-orforglipron-fda-decision-dtc-sales/809598/",
-      "priority": "medium"
-    }
-  ],
-  "upcomingCatalysts": [
-    {
-      "date": "2026-03-31",
-      "event": "Orforglipron FDA Decision",
-      "company": "LLY",
-      "description": "Priority review for oral GLP-1",
-      "type": "regulatory"
-    },
-    {
-      "date": "2026-06-30",
-      "event": "CT-388 Phase 3 Initiation",
-      "company": "RHHBY",
-      "description": "Roche dual GLP-1/GIP",
-      "type": "clinical"
-    }
-  ],
-  "metadata": {
-    "version": "1.0",
-    "dataQuality": {
-      "marketData": true,
-      "newsItems": true,
-      "catalysts": true
-    }
-  }
+  ]
 }
