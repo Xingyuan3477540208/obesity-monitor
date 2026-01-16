@@ -1,53 +1,53 @@
 {
-  "lastUpdated": "2026-01-16T16:33:53.233257Z",
+  "lastUpdated": "2026-01-16T17:27:16.130229Z",
   "stocks": [
     {
       "ticker": "LLY",
       "company": "Eli Lilly and Company",
-      "price": 1044.04,
-      "change": 11.07,
-      "changePercent": 1.07,
-      "marketCap": "935.9B"
+      "price": 1046.2,
+      "change": 13.23,
+      "changePercent": 1.28,
+      "marketCap": "937.9B"
     },
     {
       "ticker": "NVO",
       "company": "Novo Nordisk A/S",
-      "price": 61.31,
-      "change": 4.19,
-      "changePercent": 7.34,
-      "marketCap": "272.4B"
+      "price": 61.58,
+      "change": 4.46,
+      "changePercent": 7.8,
+      "marketCap": "273.6B"
     },
     {
       "ticker": "VKTX",
       "company": "Viking Therapeutics, Inc.",
-      "price": 33.16,
-      "change": 1.28,
-      "changePercent": 4.02,
-      "marketCap": "3.7B"
+      "price": 33.55,
+      "change": 1.67,
+      "changePercent": 5.24,
+      "marketCap": "3.8B"
     },
     {
       "ticker": "AMGN",
       "company": "Amgen Inc.",
-      "price": 329.49,
-      "change": -0.54,
-      "changePercent": -0.16,
-      "marketCap": "177.4B"
+      "price": 329.24,
+      "change": -0.79,
+      "changePercent": -0.24,
+      "marketCap": "177.3B"
     },
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
-      "price": 54.16,
-      "change": 0.04,
-      "changePercent": 0.07,
-      "marketCap": "345.0B"
+      "price": 54.39,
+      "change": 0.27,
+      "changePercent": 0.5,
+      "marketCap": "346.5B"
     },
     {
       "ticker": "PFE",
       "company": "Pfizer Inc.",
-      "price": 25.67,
-      "change": -0.22,
-      "changePercent": -0.87,
-      "marketCap": "145.9B"
+      "price": 25.72,
+      "change": -0.17,
+      "changePercent": -0.68,
+      "marketCap": "146.2B"
     }
   ]
 }
