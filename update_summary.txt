@@ -1,7 +1,7 @@
 ======================================================================
 📊 OBESITY DRUG DASHBOARD - UPDATE SUMMARY
 ======================================================================
-🕒 Update Time: 2026-01-14T22:34:30.649204
+🕒 Update Time: 2026-01-15T20:43:05.208043
 
 📈 MARKET DATA
 ----------------------------------------------------------------------
@@ -11,17 +11,16 @@ Gainers: 0 | Losers: 0
 
 🏆 TOP MOVERS
 ----------------------------------------------------------------------
-1. 📈 VKTX   $   34.34   +11.89%  Viking Therapeutics, Inc.
-2. 📈 PFE    $   25.58    +1.71%  Pfizer Inc.
-3. 📈 AMGN   $  328.97    +1.44%  Amgen Inc.
-4. 📈 RHHBY  $   53.96    +1.39%  Roche Holding AG
-5. 📉 NVO    $   58.91    -1.22%  Novo Nordisk A/S
+1. 📉 VKTX   $   31.88    -7.16%  Viking Therapeutics, Inc.
+2. 📉 LLY    $ 1032.97    -3.76%  Eli Lilly and Company
+3. 📉 NVO    $   57.12    -3.04%  Novo Nordisk A/S
+4. 📈 PFE    $   25.89    +1.21%  Pfizer Inc.
+5. 📈 AMGN   $  330.03    +0.32%  Amgen Inc.
 
 📰 LATEST NEWS
 ----------------------------------------------------------------------
 1. 🔵 [Wed, 14 Jan 2026 14:59:25 -0500] JPM26: Paying cash for obesity drugs, renewed IPO optimism a...
 2. 🔵 [Wed, 14 Jan 2026 11:51:00 -0500] Lilly, chasing Novo, expects second-quarter FDA decision on ...
-3. 🔵 [Mon, 12 Jan 2026 17:18:00 -0500] JPM26: US biotech’s ‘Sputnik moment,’ Pfizer’s obesity ambit...
 
 ======================================================================
 ✅ Update completed successfully!
