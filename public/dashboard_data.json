@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-17T01:53:43.357732Z",
+  "lastUpdated": "2026-01-17T03:25:34.883518Z",
   "stocks": [
     {
       "ticker": "LLY",
@@ -36,9 +36,9 @@
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
-      "price": 54.24,
-      "change": 0.12,
-      "changePercent": 0.22,
+      "price": 54.25,
+      "change": 0.13,
+      "changePercent": 0.24,
       "marketCap": "345.5B"
     },
     {
