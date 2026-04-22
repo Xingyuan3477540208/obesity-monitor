@@ -1,62 +1,58 @@
 {
-  "lastUpdated": "2026-04-21T15:13:39.104035Z",
+  "lastUpdated": "2026-04-22T15:14:03.088168Z",
   "updateFrequency": "daily",
   "stocks": [
     {
       "ticker": "LLY",
       "company": "Eli Lilly and Company",
-      "price": 894.48,
-      "change": -25.42,
-      "changePercent": -2.76,
-      "marketCap": "800.6B"
+      "price": 916.07,
+      "change": 13.05,
+      "changePercent": 1.45,
+      "marketCap": "819.9B"
     },
     {
       "ticker": "NVO",
       "company": "Novo Nordisk A/S",
-      "price": 38.96,
-      "change": -1.5,
-      "changePercent": -3.71,
-      "marketCap": "173.5B"
+      "price": 39.03,
+      "change": -0.38,
+      "changePercent": -0.98,
+      "marketCap": "173.6B"
     },
     {
       "ticker": "VKTX",
       "company": "Viking Therapeutics, Inc.",
-      "price": 34.06,
-      "change": -1.47,
-      "changePercent": -4.14,
-      "marketCap": "3.9B"
+      "price": 34.13,
+      "change": 0.33,
+      "changePercent": 0.98,
+      "marketCap": "4.0B"
     },
     {
       "ticker": "AMGN",
       "company": "Amgen Inc.",
-      "price": 343.13,
-      "change": -7.03,
-      "changePercent": -2.01,
-      "marketCap": "185.0B"
+      "price": 345.62,
+      "change": 0.77,
+      "changePercent": 0.22,
+      "marketCap": "186.3B"
     },
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
-      "price": 50.71,
-      "change": -0.62,
-      "changePercent": -1.21,
-      "marketCap": "326.6B"
+      "price": 49.88,
+      "change": -0.05,
+      "changePercent": -0.1,
+      "marketCap": "321.3B"
     },
     {
       "ticker": "PFE",
       "company": "Pfizer Inc.",
-      "price": 27.36,
-      "change": -0.16,
-      "changePercent": -0.58,
-      "marketCap": "155.6B"
+      "price": 26.83,
+      "change": -0.48,
+      "changePercent": -1.74,
+      "marketCap": "152.6B"
     }
   ],
   "historicalData": {
     "LLY": [
-      {
-        "date": "2025-10-23",
-        "price": 818.47
-      },
       {
         "date": "2025-10-24",
         "price": 822.87
@@ -543,14 +539,14 @@
       },
       {
         "date": "2026-04-21",
-        "price": 894.48
+        "price": 903.02
+      },
+      {
+        "date": "2026-04-22",
+        "price": 916.07
       }
     ],
     "NVO": [
-      {
-        "date": "2025-10-23",
-        "price": 51.35
-      },
       {
         "date": "2025-10-24",
         "price": 51.09
@@ -1037,14 +1033,14 @@
       },
       {
         "date": "2026-04-21",
-        "price": 38.96
+        "price": 39.42
+      },
+      {
+        "date": "2026-04-22",
+        "price": 39.03
       }
     ],
     "VKTX": [
-      {
-        "date": "2025-10-23",
-        "price": 33.92
-      },
       {
         "date": "2025-10-24",
         "price": 34.42
@@ -1531,14 +1527,14 @@
       },
       {
         "date": "2026-04-21",
-        "price": 34.06
+        "price": 33.8
+      },
+      {
+        "date": "2026-04-22",
+        "price": 34.13
       }
     ],
     "AMGN": [
-      {
-        "date": "2025-10-23",
-        "price": 288.81
-      },
       {
         "date": "2025-10-24",
         "price": 287.7
@@ -2025,14 +2021,14 @@
       },
       {
         "date": "2026-04-21",
-        "price": 343.13
+        "price": 344.86
+      },
+      {
+        "date": "2026-04-22",
+        "price": 345.62
       }
     ],
     "RHHBY": [
-      {
-        "date": "2025-10-23",
-        "price": 41.17
-      },
       {
         "date": "2025-10-24",
         "price": 40.97
@@ -2519,14 +2515,14 @@
       },
       {
         "date": "2026-04-21",
-        "price": 50.71
+        "price": 49.93
+      },
+      {
+        "date": "2026-04-22",
+        "price": 49.88
       }
     ],
     "PFE": [
-      {
-        "date": "2025-10-23",
-        "price": 23.84
-      },
       {
         "date": "2025-10-24",
         "price": 23.93
@@ -3013,7 +3009,11 @@
       },
       {
         "date": "2026-04-21",
-        "price": 27.36
+        "price": 27.31
+      },
+      {
+        "date": "2026-04-22",
+        "price": 26.83
       }
     ]
   }
