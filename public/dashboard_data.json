@@ -1,62 +1,58 @@
 {
-  "lastUpdated": "2026-06-02T18:04:10.899639Z",
+  "lastUpdated": "2026-06-03T18:22:44.914129Z",
   "updateFrequency": "daily",
   "stocks": [
     {
       "ticker": "LLY",
       "company": "Eli Lilly and Company",
-      "price": 1063.13,
-      "change": -19.07,
-      "changePercent": -1.76,
-      "marketCap": "948.0B"
+      "price": 1088.52,
+      "change": 24.37,
+      "changePercent": 2.29,
+      "marketCap": "970.7B"
     },
     {
       "ticker": "NVO",
       "company": "Novo Nordisk A/S",
-      "price": 42.85,
-      "change": -1.22,
-      "changePercent": -2.78,
-      "marketCap": "189.8B"
+      "price": 42.13,
+      "change": -0.79,
+      "changePercent": -1.84,
+      "marketCap": "186.6B"
     },
     {
       "ticker": "VKTX",
       "company": "Viking Therapeutics, Inc.",
-      "price": 29.65,
-      "change": -1.62,
-      "changePercent": -5.2,
+      "price": 29.32,
+      "change": 0.02,
+      "changePercent": 0.09,
       "marketCap": "3.4B"
     },
     {
       "ticker": "AMGN",
       "company": "Amgen Inc.",
-      "price": 326.71,
-      "change": -2.42,
-      "changePercent": -0.73,
-      "marketCap": "176.3B"
+      "price": 337.61,
+      "change": 9.35,
+      "changePercent": 2.85,
+      "marketCap": "182.2B"
     },
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
-      "price": 48.96,
-      "change": -1.26,
-      "changePercent": -2.51,
-      "marketCap": "315.3B"
+      "price": 49.17,
+      "change": 0.1,
+      "changePercent": 0.2,
+      "marketCap": "316.7B"
     },
     {
       "ticker": "PFE",
       "company": "Pfizer Inc.",
-      "price": 25.54,
-      "change": -0.09,
-      "changePercent": -0.35,
-      "marketCap": "145.5B"
+      "price": 25.43,
+      "change": -0.11,
+      "changePercent": -0.45,
+      "marketCap": "144.9B"
     }
   ],
   "historicalData": {
     "LLY": [
-      {
-        "date": "2025-12-04",
-        "price": 1011.06
-      },
       {
         "date": "2025-12-05",
         "price": 1006.89
@@ -543,14 +539,14 @@
       },
       {
         "date": "2026-06-02",
-        "price": 1063.13
+        "price": 1064.15
+      },
+      {
+        "date": "2026-06-03",
+        "price": 1088.52
       }
     ],
     "NVO": [
-      {
-        "date": "2025-12-04",
-        "price": 46.29
-      },
       {
         "date": "2025-12-05",
         "price": 46.17
@@ -1037,14 +1033,14 @@
       },
       {
         "date": "2026-06-02",
-        "price": 42.85
+        "price": 42.92
+      },
+      {
+        "date": "2026-06-03",
+        "price": 42.13
       }
     ],
     "VKTX": [
-      {
-        "date": "2025-12-04",
-        "price": 38.57
-      },
       {
         "date": "2025-12-05",
         "price": 38.55
@@ -1531,14 +1527,14 @@
       },
       {
         "date": "2026-06-02",
-        "price": 29.65
+        "price": 29.29
+      },
+      {
+        "date": "2026-06-03",
+        "price": 29.32
       }
     ],
     "AMGN": [
-      {
-        "date": "2025-12-04",
-        "price": 335.29
-      },
       {
         "date": "2025-12-05",
         "price": 325.16
@@ -2025,14 +2021,14 @@
       },
       {
         "date": "2026-06-02",
-        "price": 326.71
+        "price": 328.26
+      },
+      {
+        "date": "2026-06-03",
+        "price": 337.61
       }
     ],
     "RHHBY": [
-      {
-        "date": "2025-12-04",
-        "price": 46.72
-      },
       {
         "date": "2025-12-05",
         "price": 47.03
@@ -2519,14 +2515,14 @@
       },
       {
         "date": "2026-06-02",
-        "price": 48.96
+        "price": 49.07
+      },
+      {
+        "date": "2026-06-03",
+        "price": 49.17
       }
     ],
     "PFE": [
-      {
-        "date": "2025-12-04",
-        "price": 24.87
-      },
       {
         "date": "2025-12-05",
         "price": 25.19
@@ -3013,7 +3009,11 @@
       },
       {
         "date": "2026-06-02",
-        "price": 25.54
+        "price": 25.55
+      },
+      {
+        "date": "2026-06-03",
+        "price": 25.43
       }
     ]
   }
