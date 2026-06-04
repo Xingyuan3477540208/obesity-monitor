@@ -1,62 +1,58 @@
 {
-  "lastUpdated": "2026-06-03T18:22:44.914129Z",
+  "lastUpdated": "2026-06-04T16:54:06.577078Z",
   "updateFrequency": "daily",
   "stocks": [
     {
       "ticker": "LLY",
       "company": "Eli Lilly and Company",
-      "price": 1088.52,
-      "change": 24.37,
-      "changePercent": 2.29,
-      "marketCap": "970.7B"
+      "price": 1136.11,
+      "change": 57.33,
+      "changePercent": 5.31,
+      "marketCap": "1.0T"
     },
     {
       "ticker": "NVO",
       "company": "Novo Nordisk A/S",
-      "price": 42.13,
-      "change": -0.79,
-      "changePercent": -1.84,
-      "marketCap": "186.6B"
+      "price": 44.01,
+      "change": 2.01,
+      "changePercent": 4.8,
+      "marketCap": "195.0B"
     },
     {
       "ticker": "VKTX",
       "company": "Viking Therapeutics, Inc.",
-      "price": 29.32,
-      "change": 0.02,
-      "changePercent": 0.09,
-      "marketCap": "3.4B"
+      "price": 29.82,
+      "change": 0.49,
+      "changePercent": 1.67,
+      "marketCap": "3.5B"
     },
     {
       "ticker": "AMGN",
       "company": "Amgen Inc.",
-      "price": 337.61,
-      "change": 9.35,
-      "changePercent": 2.85,
-      "marketCap": "182.2B"
+      "price": 344.57,
+      "change": 6.35,
+      "changePercent": 1.88,
+      "marketCap": "186.0B"
     },
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
-      "price": 49.17,
-      "change": 0.1,
-      "changePercent": 0.2,
-      "marketCap": "316.7B"
+      "price": 51.61,
+      "change": 2.61,
+      "changePercent": 5.33,
+      "marketCap": "332.4B"
     },
     {
       "ticker": "PFE",
       "company": "Pfizer Inc.",
-      "price": 25.43,
-      "change": -0.11,
-      "changePercent": -0.45,
-      "marketCap": "144.9B"
+      "price": 25.72,
+      "change": 0.38,
+      "changePercent": 1.5,
+      "marketCap": "146.6B"
     }
   ],
   "historicalData": {
     "LLY": [
-      {
-        "date": "2025-12-05",
-        "price": 1006.89
-      },
       {
         "date": "2025-12-08",
         "price": 994.22
@@ -543,14 +539,14 @@
       },
       {
         "date": "2026-06-03",
-        "price": 1088.52
+        "price": 1078.78
+      },
+      {
+        "date": "2026-06-04",
+        "price": 1136.11
       }
     ],
     "NVO": [
-      {
-        "date": "2025-12-05",
-        "price": 46.17
-      },
       {
         "date": "2025-12-08",
         "price": 45.12
@@ -1037,14 +1033,14 @@
       },
       {
         "date": "2026-06-03",
-        "price": 42.13
+        "price": 42.0
+      },
+      {
+        "date": "2026-06-04",
+        "price": 44.01
       }
     ],
     "VKTX": [
-      {
-        "date": "2025-12-05",
-        "price": 38.55
-      },
       {
         "date": "2025-12-08",
         "price": 37.98
@@ -1531,14 +1527,14 @@
       },
       {
         "date": "2026-06-03",
-        "price": 29.32
+        "price": 29.33
+      },
+      {
+        "date": "2026-06-04",
+        "price": 29.82
       }
     ],
     "AMGN": [
-      {
-        "date": "2025-12-05",
-        "price": 325.16
-      },
       {
         "date": "2025-12-08",
         "price": 316.63
@@ -2025,14 +2021,14 @@
       },
       {
         "date": "2026-06-03",
-        "price": 337.61
+        "price": 338.22
+      },
+      {
+        "date": "2026-06-04",
+        "price": 344.57
       }
     ],
     "RHHBY": [
-      {
-        "date": "2025-12-05",
-        "price": 47.03
-      },
       {
         "date": "2025-12-08",
         "price": 47.4
@@ -2519,14 +2515,14 @@
       },
       {
         "date": "2026-06-03",
-        "price": 49.17
+        "price": 49.0
+      },
+      {
+        "date": "2026-06-04",
+        "price": 51.61
       }
     ],
     "PFE": [
-      {
-        "date": "2025-12-05",
-        "price": 25.19
-      },
       {
         "date": "2025-12-08",
         "price": 24.93
@@ -3013,7 +3009,11 @@
       },
       {
         "date": "2026-06-03",
-        "price": 25.43
+        "price": 25.34
+      },
+      {
+        "date": "2026-06-04",
+        "price": 25.72
       }
     ]
   }
