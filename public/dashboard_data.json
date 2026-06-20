@@ -1,37 +1,37 @@
 {
-  "lastUpdated": "2026-06-19T16:31:25.011796Z",
+  "lastUpdated": "2026-06-20T15:45:26.474558Z",
   "updateFrequency": "daily",
   "stocks": [
     {
       "ticker": "LLY",
       "company": "Eli Lilly and Company",
-      "price": NaN,
-      "change": NaN,
-      "changePercent": NaN,
+      "price": 1098.57,
+      "change": -13.43,
+      "changePercent": -1.21,
       "marketCap": "979.6B"
     },
     {
       "ticker": "NVO",
       "company": "Novo Nordisk A/S",
-      "price": NaN,
-      "change": NaN,
-      "changePercent": NaN,
+      "price": 43.19,
+      "change": -0.33,
+      "changePercent": -0.76,
       "marketCap": "191.2B"
     },
     {
       "ticker": "VKTX",
       "company": "Viking Therapeutics, Inc.",
-      "price": NaN,
-      "change": NaN,
-      "changePercent": NaN,
+      "price": 30.38,
+      "change": 0.09,
+      "changePercent": 0.3,
       "marketCap": "3.5B"
     },
     {
       "ticker": "AMGN",
       "company": "Amgen Inc.",
-      "price": NaN,
-      "change": NaN,
-      "changePercent": NaN,
+      "price": 337.6,
+      "change": -4.06,
+      "changePercent": -1.19,
       "marketCap": "182.2B"
     },
     {
@@ -45,9 +45,9 @@
     {
       "ticker": "PFE",
       "company": "Pfizer Inc.",
-      "price": NaN,
-      "change": NaN,
-      "changePercent": NaN,
+      "price": 25.21,
+      "change": -0.71,
+      "changePercent": -2.74,
       "marketCap": "143.7B"
     }
   ],
@@ -543,7 +543,7 @@
       },
       {
         "date": "2026-06-18",
-        "price": NaN
+        "price": 1098.57
       }
     ],
     "NVO": [
@@ -1037,7 +1037,7 @@
       },
       {
         "date": "2026-06-18",
-        "price": NaN
+        "price": 43.19
       }
     ],
     "VKTX": [
@@ -1531,7 +1531,7 @@
       },
       {
         "date": "2026-06-18",
-        "price": NaN
+        "price": 30.38
       }
     ],
     "AMGN": [
@@ -2025,7 +2025,7 @@
       },
       {
         "date": "2026-06-18",
-        "price": NaN
+        "price": 337.6
       }
     ],
     "RHHBY": [
@@ -3013,7 +3013,7 @@
       },
       {
         "date": "2026-06-18",
-        "price": NaN
+        "price": 25.21
       }
     ]
   }
