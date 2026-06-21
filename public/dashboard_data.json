@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T15:45:26.474558Z",
+  "lastUpdated": "2026-06-21T15:51:18.049944Z",
   "updateFrequency": "daily",
   "stocks": [
     {
@@ -37,9 +37,9 @@
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
-      "price": NaN,
-      "change": NaN,
-      "changePercent": NaN,
+      "price": 49.74,
+      "change": -1.32,
+      "changePercent": -2.59,
       "marketCap": "320.4B"
     },
     {
@@ -53,10 +53,6 @@
   ],
   "historicalData": {
     "LLY": [
-      {
-        "date": "2025-12-22",
-        "price": 1072.84
-      },
       {
         "date": "2025-12-23",
         "price": 1068.02
@@ -548,10 +544,6 @@
     ],
     "NVO": [
       {
-        "date": "2025-12-22",
-        "price": 46.4
-      },
-      {
         "date": "2025-12-23",
         "price": 49.78
       },
@@ -1041,10 +1033,6 @@
       }
     ],
     "VKTX": [
-      {
-        "date": "2025-12-22",
-        "price": 35.4
-      },
       {
         "date": "2025-12-23",
         "price": 36.41
@@ -1536,10 +1524,6 @@
     ],
     "AMGN": [
       {
-        "date": "2025-12-22",
-        "price": 326.64
-      },
-      {
         "date": "2025-12-23",
         "price": 326.74
       },
@@ -2030,10 +2014,6 @@
     ],
     "RHHBY": [
       {
-        "date": "2025-12-22",
-        "price": 49.81
-      },
-      {
         "date": "2025-12-23",
         "price": 50.98
       },
@@ -2519,14 +2499,10 @@
       },
       {
         "date": "2026-06-18",
-        "price": NaN
+        "price": 49.74
       }
     ],
     "PFE": [
-      {
-        "date": "2025-12-22",
-        "price": 24.39
-      },
       {
         "date": "2025-12-23",
         "price": 24.07
