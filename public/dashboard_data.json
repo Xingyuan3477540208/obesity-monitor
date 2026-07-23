@@ -1,62 +1,58 @@
 {
-  "lastUpdated": "2026-07-22T15:42:27.830712Z",
+  "lastUpdated": "2026-07-23T15:55:05.964899Z",
   "updateFrequency": "daily",
   "stocks": [
     {
       "ticker": "LLY",
       "company": "Eli Lilly and Company",
-      "price": 1167.43,
-      "change": -7.98,
-      "changePercent": -0.68,
-      "marketCap": "1.0T"
+      "price": 1186.44,
+      "change": 23.43,
+      "changePercent": 2.02,
+      "marketCap": "1.1T"
     },
     {
       "ticker": "NVO",
       "company": "Novo Nordisk A/S",
-      "price": 48.72,
-      "change": -0.66,
-      "changePercent": -1.33,
-      "marketCap": "215.5B"
+      "price": 48.44,
+      "change": 0.25,
+      "changePercent": 0.52,
+      "marketCap": "214.2B"
     },
     {
       "ticker": "VKTX",
       "company": "Viking Therapeutics, Inc.",
-      "price": 37.7,
-      "change": -0.25,
-      "changePercent": -0.66,
-      "marketCap": "4.4B"
+      "price": 36.33,
+      "change": -0.98,
+      "changePercent": -2.63,
+      "marketCap": "4.2B"
     },
     {
       "ticker": "AMGN",
       "company": "Amgen Inc.",
-      "price": 368.34,
-      "change": 2.1,
-      "changePercent": 0.57,
-      "marketCap": "198.8B"
+      "price": 367.52,
+      "change": 1.48,
+      "changePercent": 0.4,
+      "marketCap": "198.4B"
     },
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
-      "price": 51.27,
-      "change": 0.13,
-      "changePercent": 0.25,
-      "marketCap": "330.2B"
+      "price": 53.87,
+      "change": 2.17,
+      "changePercent": 4.2,
+      "marketCap": "347.0B"
     },
     {
       "ticker": "PFE",
       "company": "Pfizer Inc.",
-      "price": 25.05,
-      "change": 0.1,
-      "changePercent": 0.42,
-      "marketCap": "142.7B"
+      "price": 25.02,
+      "change": 0.2,
+      "changePercent": 0.8,
+      "marketCap": "142.6B"
     }
   ],
   "historicalData": {
     "LLY": [
-      {
-        "date": "2026-01-23",
-        "price": 1060.69
-      },
       {
         "date": "2026-01-26",
         "price": 1059.16
@@ -547,14 +543,14 @@
       },
       {
         "date": "2026-07-22",
-        "price": 1167.43
+        "price": 1163.01
+      },
+      {
+        "date": "2026-07-23",
+        "price": 1186.44
       }
     ],
     "NVO": [
-      {
-        "date": "2026-01-23",
-        "price": 60.06
-      },
       {
         "date": "2026-01-26",
         "price": 61.72
@@ -1045,14 +1041,14 @@
       },
       {
         "date": "2026-07-22",
-        "price": 48.72
+        "price": 48.19
+      },
+      {
+        "date": "2026-07-23",
+        "price": 48.44
       }
     ],
     "VKTX": [
-      {
-        "date": "2026-01-23",
-        "price": 32.22
-      },
       {
         "date": "2026-01-26",
         "price": 31.73
@@ -1543,14 +1539,14 @@
       },
       {
         "date": "2026-07-22",
-        "price": 37.7
+        "price": 37.31
+      },
+      {
+        "date": "2026-07-23",
+        "price": 36.33
       }
     ],
     "AMGN": [
-      {
-        "date": "2026-01-23",
-        "price": 339.81
-      },
       {
         "date": "2026-01-26",
         "price": 344.68
@@ -2041,14 +2037,14 @@
       },
       {
         "date": "2026-07-22",
-        "price": 368.34
+        "price": 366.05
+      },
+      {
+        "date": "2026-07-23",
+        "price": 367.52
       }
     ],
     "RHHBY": [
-      {
-        "date": "2026-01-23",
-        "price": 53.54
-      },
       {
         "date": "2026-01-26",
         "price": 54.4
@@ -2539,14 +2535,14 @@
       },
       {
         "date": "2026-07-22",
-        "price": 51.27
+        "price": 51.7
+      },
+      {
+        "date": "2026-07-23",
+        "price": 53.87
       }
     ],
     "PFE": [
-      {
-        "date": "2026-01-23",
-        "price": 25.23
-      },
       {
         "date": "2026-01-26",
         "price": 25.46
@@ -3037,7 +3033,11 @@
       },
       {
         "date": "2026-07-22",
-        "price": 25.05
+        "price": 24.82
+      },
+      {
+        "date": "2026-07-23",
+        "price": 25.02
       }
     ]
   }
