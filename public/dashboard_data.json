@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-08-15T14:21:24.887948Z",
+  "lastUpdated": "2026-08-16T14:21:51.329614Z",
   "updateFrequency": "daily",
   "stocks": [
     {
       "ticker": "LLY",
-      "company": "Eli Lilly and Company",
+      "company": "LLY",
       "price": 1180.16,
       "change": -27.11,
       "changePercent": -2.25,
@@ -12,7 +12,7 @@
     },
     {
       "ticker": "NVO",
-      "company": "Novo Nordisk A/S",
+      "company": "NVO",
       "price": 45.89,
       "change": -0.83,
       "changePercent": -1.78,
@@ -32,7 +32,7 @@
       "price": 415.21,
       "change": -2.63,
       "changePercent": -0.63,
-      "marketCap": "224.1B"
+      "marketCap": "224.6B"
     },
     {
       "ticker": "RHHBY",
@@ -44,7 +44,7 @@
     },
     {
       "ticker": "PFE",
-      "company": "Pfizer Inc.",
+      "company": "PFE",
       "price": 26.79,
       "change": -0.01,
       "changePercent": -0.04,
@@ -1484,10 +1484,6 @@
       {
         "date": "2026-07-21",
         "price": 37.95
-      },
-      {
-        "date": "2026-07-22",
-        "price": 37.31
       },
       {
         "date": "2026-07-23",
