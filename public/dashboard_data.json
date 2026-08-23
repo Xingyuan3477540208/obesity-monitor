@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-08-22T14:20:34.997157Z",
+  "lastUpdated": "2026-08-23T14:22:31.813266Z",
   "updateFrequency": "daily",
   "stocks": [
     {
       "ticker": "LLY",
-      "company": "LLY",
+      "company": "Eli Lilly and Company",
       "price": 1255.4,
       "change": 11.0,
       "changePercent": 0.88,
@@ -12,7 +12,7 @@
     },
     {
       "ticker": "NVO",
-      "company": "NVO",
+      "company": "Novo Nordisk A/S",
       "price": 46.74,
       "change": 0.6,
       "changePercent": 1.3,
@@ -44,7 +44,7 @@
     },
     {
       "ticker": "PFE",
-      "company": "PFE",
+      "company": "Pfizer Inc.",
       "price": 28.07,
       "change": 0.28,
       "changePercent": 1.01,
@@ -53,10 +53,6 @@
   ],
   "historicalData": {
     "LLY": [
-      {
-        "date": "2026-02-23",
-        "price": 1055.23
-      },
       {
         "date": "2026-02-24",
         "price": 1038.87
@@ -560,10 +556,6 @@
     ],
     "NVO": [
       {
-        "date": "2026-02-23",
-        "price": 37.75
-      },
-      {
         "date": "2026-02-24",
         "price": 36.76
       },
@@ -1065,10 +1057,6 @@
       }
     ],
     "VKTX": [
-      {
-        "date": "2026-02-23",
-        "price": 34.46
-      },
       {
         "date": "2026-02-24",
         "price": 33.75
@@ -1572,10 +1560,6 @@
     ],
     "AMGN": [
       {
-        "date": "2026-02-23",
-        "price": 374.39
-      },
-      {
         "date": "2026-02-24",
         "price": 377.79
       },
@@ -2078,10 +2062,6 @@
     ],
     "RHHBY": [
       {
-        "date": "2026-02-23",
-        "price": 58.13
-      },
-      {
         "date": "2026-02-24",
         "price": 58.72
       },
@@ -2583,10 +2563,6 @@
       }
     ],
     "PFE": [
-      {
-        "date": "2026-02-23",
-        "price": 26.16
-      },
       {
         "date": "2026-02-24",
         "price": 26.24
