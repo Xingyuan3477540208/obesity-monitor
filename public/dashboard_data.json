@@ -1,62 +1,58 @@
 {
-  "lastUpdated": "2026-08-25T14:44:00.218397Z",
+  "lastUpdated": "2026-08-26T14:42:49.914640Z",
   "updateFrequency": "daily",
   "stocks": [
     {
       "ticker": "LLY",
       "company": "Eli Lilly and Company",
-      "price": 1251.9,
-      "change": 4.96,
-      "changePercent": 0.4,
+      "price": 1216.64,
+      "change": -17.02,
+      "changePercent": -1.38,
       "marketCap": "1.1T"
     },
     {
       "ticker": "NVO",
       "company": "Novo Nordisk A/S",
-      "price": 47.81,
-      "change": 0.9,
-      "changePercent": 1.91,
-      "marketCap": "211.4B"
+      "price": 47.67,
+      "change": -0.99,
+      "changePercent": -2.02,
+      "marketCap": "210.8B"
     },
     {
       "ticker": "VKTX",
       "company": "Viking Therapeutics, Inc.",
-      "price": 34.58,
-      "change": 1.35,
-      "changePercent": 4.06,
+      "price": 34.05,
+      "change": -0.12,
+      "changePercent": -0.35,
       "marketCap": "4.0B"
     },
     {
       "ticker": "AMGN",
       "company": "Amgen Inc.",
-      "price": 443.86,
-      "change": 0.02,
-      "changePercent": 0.0,
-      "marketCap": "240.0B"
+      "price": 440.74,
+      "change": -1.5,
+      "changePercent": -0.34,
+      "marketCap": "238.3B"
     },
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
-      "price": 58.12,
-      "change": 0.65,
-      "changePercent": 1.13,
-      "marketCap": "370.5B"
+      "price": 57.49,
+      "change": -0.98,
+      "changePercent": -1.68,
+      "marketCap": "366.4B"
     },
     {
       "ticker": "PFE",
       "company": "Pfizer Inc.",
-      "price": 28.16,
-      "change": 0.19,
-      "changePercent": 0.68,
-      "marketCap": "160.5B"
+      "price": 28.31,
+      "change": -0.26,
+      "changePercent": -0.92,
+      "marketCap": "161.3B"
     }
   ],
   "historicalData": {
     "LLY": [
-      {
-        "date": "2026-02-26",
-        "price": 1018.8
-      },
       {
         "date": "2026-02-27",
         "price": 1048.68
@@ -551,14 +547,14 @@
       },
       {
         "date": "2026-08-25",
-        "price": 1251.9
+        "price": 1233.66
+      },
+      {
+        "date": "2026-08-26",
+        "price": 1216.64
       }
     ],
     "NVO": [
-      {
-        "date": "2026-02-26",
-        "price": 35.83
-      },
       {
         "date": "2026-02-27",
         "price": 35.67
@@ -1053,14 +1049,14 @@
       },
       {
         "date": "2026-08-25",
-        "price": 47.81
+        "price": 48.66
+      },
+      {
+        "date": "2026-08-26",
+        "price": 47.67
       }
     ],
     "VKTX": [
-      {
-        "date": "2026-02-26",
-        "price": 32.97
-      },
       {
         "date": "2026-02-27",
         "price": 33.84
@@ -1555,14 +1551,14 @@
       },
       {
         "date": "2026-08-25",
-        "price": 34.58
+        "price": 34.17
+      },
+      {
+        "date": "2026-08-26",
+        "price": 34.05
       }
     ],
     "AMGN": [
-      {
-        "date": "2026-02-26",
-        "price": 374.3
-      },
       {
         "date": "2026-02-27",
         "price": 383.01
@@ -2057,14 +2053,14 @@
       },
       {
         "date": "2026-08-25",
-        "price": 443.86
+        "price": 442.24
+      },
+      {
+        "date": "2026-08-26",
+        "price": 440.74
       }
     ],
     "RHHBY": [
-      {
-        "date": "2026-02-26",
-        "price": 57.22
-      },
       {
         "date": "2026-02-27",
         "price": 57.72
@@ -2559,14 +2555,14 @@
       },
       {
         "date": "2026-08-25",
-        "price": 58.12
+        "price": 58.47
+      },
+      {
+        "date": "2026-08-26",
+        "price": 57.49
       }
     ],
     "PFE": [
-      {
-        "date": "2026-02-26",
-        "price": 26.2
-      },
       {
         "date": "2026-02-27",
         "price": 26.73
@@ -3061,7 +3057,11 @@
       },
       {
         "date": "2026-08-25",
-        "price": 28.16
+        "price": 28.57
+      },
+      {
+        "date": "2026-08-26",
+        "price": 28.31
       }
     ]
   }
