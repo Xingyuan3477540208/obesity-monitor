@@ -1,54 +1,54 @@
 {
-  "lastUpdated": "2026-09-28T20:23:31.300301Z",
+  "lastUpdated": "2026-09-29T19:07:27.090060Z",
   "updateFrequency": "daily",
   "stocks": [
     {
       "ticker": "LLY",
       "company": "Eli Lilly and Company",
-      "price": 1184.78,
-      "change": 1.32,
-      "changePercent": 0.11,
+      "price": 1185.52,
+      "change": 0.74,
+      "changePercent": 0.06,
       "marketCap": "1.1T"
     },
     {
       "ticker": "NVO",
       "company": "Novo Nordisk A/S",
-      "price": 38.71,
-      "change": -0.09,
-      "changePercent": -0.23,
-      "marketCap": "171.0B"
+      "price": 38.24,
+      "change": -0.47,
+      "changePercent": -1.2,
+      "marketCap": "168.9B"
     },
     {
       "ticker": "VKTX",
       "company": "Viking Therapeutics, Inc.",
-      "price": 33.03,
-      "change": -2.53,
-      "changePercent": -7.11,
-      "marketCap": "4.1B"
+      "price": 31.58,
+      "change": -1.45,
+      "changePercent": -4.39,
+      "marketCap": "3.9B"
     },
     {
       "ticker": "AMGN",
       "company": "Amgen Inc.",
-      "price": 418.13,
-      "change": 3.52,
-      "changePercent": 0.85,
-      "marketCap": "226.1B"
+      "price": 421.39,
+      "change": 3.26,
+      "changePercent": 0.78,
+      "marketCap": "227.8B"
     },
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
-      "price": 53.34,
-      "change": -1.11,
-      "changePercent": -2.04,
-      "marketCap": "340.0B"
+      "price": 52.19,
+      "change": -1.18,
+      "changePercent": -2.21,
+      "marketCap": "332.7B"
     },
     {
       "ticker": "PFE",
       "company": "Pfizer Inc.",
-      "price": 28.72,
-      "change": 0.05,
-      "changePercent": 0.17,
-      "marketCap": "163.7B"
+      "price": 28.64,
+      "change": -0.08,
+      "changePercent": -0.3,
+      "marketCap": "163.2B"
     }
   ],
   "historicalData": {
@@ -544,6 +544,10 @@
       {
         "date": "2026-09-28",
         "price": 1184.78
+      },
+      {
+        "date": "2026-09-29",
+        "price": 1185.52
       }
     ],
     "NVO": [
@@ -1038,6 +1042,10 @@
       {
         "date": "2026-09-28",
         "price": 38.71
+      },
+      {
+        "date": "2026-09-29",
+        "price": 38.24
       }
     ],
     "VKTX": [
@@ -1532,6 +1540,10 @@
       {
         "date": "2026-09-28",
         "price": 33.03
+      },
+      {
+        "date": "2026-09-29",
+        "price": 31.58
       }
     ],
     "AMGN": [
@@ -2026,6 +2038,10 @@
       {
         "date": "2026-09-28",
         "price": 418.13
+      },
+      {
+        "date": "2026-09-29",
+        "price": 421.39
       }
     ],
     "RHHBY": [
@@ -2519,7 +2535,11 @@
       },
       {
         "date": "2026-09-28",
-        "price": 53.34
+        "price": 53.37
+      },
+      {
+        "date": "2026-09-29",
+        "price": 52.19
       }
     ],
     "PFE": [
@@ -3014,6 +3034,10 @@
       {
         "date": "2026-09-28",
         "price": 28.72
+      },
+      {
+        "date": "2026-09-29",
+        "price": 28.64
       }
     ]
   }
