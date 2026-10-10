@@ -1,38 +1,38 @@
 {
-  "lastUpdated": "2026-10-09T19:17:03.130870Z",
+  "lastUpdated": "2026-10-10T18:13:53.993326Z",
   "updateFrequency": "daily",
   "stocks": [
     {
       "ticker": "LLY",
       "company": "Eli Lilly and Company",
-      "price": 1173.75,
-      "change": 4.15,
-      "changePercent": 0.35,
-      "marketCap": "1.0T"
+      "price": 1179.27,
+      "change": 9.67,
+      "changePercent": 0.83,
+      "marketCap": "1.1T"
     },
     {
       "ticker": "NVO",
       "company": "Novo Nordisk A/S",
-      "price": 38.55,
-      "change": 0.37,
-      "changePercent": 0.96,
-      "marketCap": "170.2B"
+      "price": 38.64,
+      "change": 0.46,
+      "changePercent": 1.2,
+      "marketCap": "170.6B"
     },
     {
       "ticker": "VKTX",
       "company": "Viking Therapeutics, Inc.",
-      "price": 28.52,
-      "change": 0.8,
-      "changePercent": 2.87,
+      "price": 28.51,
+      "change": 0.78,
+      "changePercent": 2.81,
       "marketCap": "3.6B"
     },
     {
       "ticker": "AMGN",
       "company": "Amgen Inc.",
-      "price": 416.5,
-      "change": 9.06,
-      "changePercent": 2.22,
-      "marketCap": "225.2B"
+      "price": 414.87,
+      "change": 7.43,
+      "changePercent": 1.82,
+      "marketCap": "224.3B"
     },
     {
       "ticker": "RHHBY",
@@ -45,10 +45,10 @@
     {
       "ticker": "PFE",
       "company": "Pfizer Inc.",
-      "price": 28.16,
-      "change": 0.34,
-      "changePercent": 1.22,
-      "marketCap": "160.5B"
+      "price": 28.28,
+      "change": 0.46,
+      "changePercent": 1.65,
+      "marketCap": "161.2B"
     }
   ],
   "historicalData": {
@@ -555,7 +555,7 @@
       },
       {
         "date": "2026-10-09",
-        "price": 1173.75
+        "price": 1179.27
       }
     ],
     "NVO": [
@@ -1061,7 +1061,7 @@
       },
       {
         "date": "2026-10-09",
-        "price": 38.55
+        "price": 38.64
       }
     ],
     "VKTX": [
@@ -1567,7 +1567,7 @@
       },
       {
         "date": "2026-10-09",
-        "price": 28.52
+        "price": 28.51
       }
     ],
     "AMGN": [
@@ -2073,7 +2073,7 @@
       },
       {
         "date": "2026-10-09",
-        "price": 416.5
+        "price": 414.87
       }
     ],
     "RHHBY": [
@@ -3085,7 +3085,7 @@
       },
       {
         "date": "2026-10-09",
-        "price": 28.16
+        "price": 28.28
       }
     ]
   }
