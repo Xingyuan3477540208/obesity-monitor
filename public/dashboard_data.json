@@ -1,62 +1,58 @@
 {
-  "lastUpdated": "2026-10-28T19:20:34.091702Z",
+  "lastUpdated": "2026-10-29T19:25:35.468152Z",
   "updateFrequency": "daily",
   "stocks": [
     {
       "ticker": "LLY",
       "company": "Eli Lilly and Company",
-      "price": 1294.81,
-      "change": 12.9,
-      "changePercent": 1.01,
+      "price": 1366.77,
+      "change": 78.46,
+      "changePercent": 6.09,
       "marketCap": "1.2T"
     },
     {
       "ticker": "NVO",
       "company": "Novo Nordisk A/S",
-      "price": 38.15,
-      "change": -0.52,
-      "changePercent": -1.34,
-      "marketCap": "168.3B"
+      "price": 38.92,
+      "change": 0.63,
+      "changePercent": 1.66,
+      "marketCap": "171.7B"
     },
     {
       "ticker": "VKTX",
       "company": "Viking Therapeutics, Inc.",
-      "price": 24.92,
-      "change": 0.03,
-      "changePercent": 0.1,
-      "marketCap": "3.2B"
+      "price": 26.6,
+      "change": 1.24,
+      "changePercent": 4.89,
+      "marketCap": "3.4B"
     },
     {
       "ticker": "AMGN",
       "company": "Amgen Inc.",
-      "price": 450.21,
-      "change": 2.26,
-      "changePercent": 0.5,
-      "marketCap": "243.4B"
+      "price": 459.93,
+      "change": 8.11,
+      "changePercent": 1.79,
+      "marketCap": "248.7B"
     },
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
-      "price": 60.11,
-      "change": -0.26,
-      "changePercent": -0.43,
-      "marketCap": "383.1B"
+      "price": 60.73,
+      "change": 0.51,
+      "changePercent": 0.85,
+      "marketCap": "387.1B"
     },
     {
       "ticker": "PFE",
       "company": "Pfizer Inc.",
-      "price": 29.33,
-      "change": -0.47,
-      "changePercent": -1.59,
-      "marketCap": "167.1B"
+      "price": 29.8,
+      "change": 0.35,
+      "changePercent": 1.18,
+      "marketCap": "169.8B"
     }
   ],
   "historicalData": {
     "LLY": [
-      {
-        "date": "2026-05-01",
-        "price": 960.3
-      },
       {
         "date": "2026-05-04",
         "price": 964.88
@@ -551,14 +547,14 @@
       },
       {
         "date": "2026-10-28",
-        "price": 1294.81
+        "price": 1288.3
+      },
+      {
+        "date": "2026-10-29",
+        "price": 1366.77
       }
     ],
     "NVO": [
-      {
-        "date": "2026-05-01",
-        "price": 43.33
-      },
       {
         "date": "2026-05-04",
         "price": 43.83
@@ -1053,14 +1049,14 @@
       },
       {
         "date": "2026-10-28",
-        "price": 38.15
+        "price": 38.29
+      },
+      {
+        "date": "2026-10-29",
+        "price": 38.92
       }
     ],
     "VKTX": [
-      {
-        "date": "2026-05-01",
-        "price": 30.0
-      },
       {
         "date": "2026-05-04",
         "price": 31.76
@@ -1555,14 +1551,14 @@
       },
       {
         "date": "2026-10-28",
-        "price": 24.92
+        "price": 25.36
+      },
+      {
+        "date": "2026-10-29",
+        "price": 26.6
       }
     ],
     "AMGN": [
-      {
-        "date": "2026-05-01",
-        "price": 325.45
-      },
       {
         "date": "2026-05-04",
         "price": 319.56
@@ -2057,14 +2053,14 @@
       },
       {
         "date": "2026-10-28",
-        "price": 450.21
+        "price": 451.83
+      },
+      {
+        "date": "2026-10-29",
+        "price": 459.93
       }
     ],
     "RHHBY": [
-      {
-        "date": "2026-05-01",
-        "price": 51.0
-      },
       {
         "date": "2026-05-04",
         "price": 50.28
@@ -2559,14 +2555,14 @@
       },
       {
         "date": "2026-10-28",
-        "price": 60.11
+        "price": 60.22
+      },
+      {
+        "date": "2026-10-29",
+        "price": 60.73
       }
     ],
     "PFE": [
-      {
-        "date": "2026-05-01",
-        "price": 25.46
-      },
       {
         "date": "2026-05-04",
         "price": 25.43
@@ -3061,7 +3057,11 @@
       },
       {
         "date": "2026-10-28",
-        "price": 29.33
+        "price": 29.45
+      },
+      {
+        "date": "2026-10-29",
+        "price": 29.8
       }
     ]
   }
