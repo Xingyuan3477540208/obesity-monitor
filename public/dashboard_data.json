@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-25T22:57:34.144886Z",
+  "lastUpdated": "2026-11-26T22:49:56.788090Z",
   "updateFrequency": "daily",
   "stocks": [
     {
@@ -37,10 +37,10 @@
     {
       "ticker": "RHHBY",
       "company": "Roche Holding AG",
-      "price": 60.91,
-      "change": -0.24,
-      "changePercent": -0.39,
-      "marketCap": "388.2B"
+      "price": 60.8,
+      "change": -0.35,
+      "changePercent": -0.57,
+      "marketCap": "387.5B"
     },
     {
       "ticker": "PFE",
@@ -2559,7 +2559,7 @@
       },
       {
         "date": "2026-11-25",
-        "price": 60.91
+        "price": 60.8
       }
     ],
     "PFE": [
